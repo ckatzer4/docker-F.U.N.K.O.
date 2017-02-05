@@ -61,6 +61,10 @@ COPY uwsgi.ini /etc/uwsgi/
 RUN mkdir /etc/circusd/
 COPY circusd.ini /etc/circusd/circusd.ini
 
+# copy in kerberos configuration
+COPY krb5.conf /etc/krb5.conf
+COPY krb5.keytab /etc/krb5.keytab
+
 # copy in the application directory
 COPY ./app /app
 WORKDIR /app

@@ -9,4 +9,9 @@ Just a Dockerfile (and friends) to build:
  * for querying a [MS sql database](https://docs.microsoft.com/en-us/sql/connect/odbc/linux/installing-the-microsoft-odbc-driver-for-sql-server-on-linux)
  * using [kerberos authentication](https://www.eyrie.org/~eagle/software/kstart/)
 
-Much inspiration taken from [tiagngolo/uwsgi-nginx-docker](https://github.com/tiangolo/uwsgi-nginx-flask-docker). See his documentation for more details
+Much inspiration taken from [tiagngolo/uwsgi-nginx-docker](https://github.com/tiangolo/uwsgi-nginx-flask-docker). See his documentation for more details.
+
+## kerberos authentication
+Right now, it is expected that the user will populate krb5.conf and krb5.keytab with the necessary authentication information before building.  As such, krb5.conf is the default configuration file and krb5.keytab is empty!
+
+For more information on building and using keytab files, see [this resource](https://kb.iu.edu/d/aumh)
